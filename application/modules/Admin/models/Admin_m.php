@@ -181,7 +181,8 @@ class Admin_m extends CI_Model
 			'password'=>password_hash($this->input->post('password'), PASSWORD_DEFAULT, ['cost'=>10]),
 			'email'=>$this->input->post('email'),
 			'fullname'=>$this->input->post('fullname'),
-			'alamat'=>$this->input->post('alamat')
+			'alamat'=>$this->input->post('alamat'),
+			'hp'=>$this->input->post('hp')
 		);
 
 		$this->db->insert('kontributor', $data);
@@ -204,5 +205,22 @@ class Admin_m extends CI_Model
 	{
 		$query=$this->db->get('log');
 		return $query->result_array();
+	}
+
+	function get_detail_admin($id)
+	{
+		$query=$this->db->get_where('admin', array('id_admin'=>$id));
+		return $query->row_array();
+	}
+
+	function update_admin($id)
+	{
+		$data=array(
+			'email'=>$this->input->post('email'),
+			'password'=>password_hash($this->input->post('password'), PASSWORD_DEFAULT, ['cost'=>10])
+		);
+
+		$this->db->where('id_admin', $id);
+		return $this->db->update('admin', $data);
 	}
 }

@@ -31,6 +31,11 @@
                   </div>
 
                   <div class="form-group">
+                    <label style="margin-left: 25%;">No. HP</label>
+                    <input type="number" required class="col-md-4"  name="hp">
+                  </div>
+
+                  <div class="form-group">
                     <label style="margin-left: 23.2%;">Username</label>
                     <input type="text" required class="col-md-4"  name="username">
                   </div>

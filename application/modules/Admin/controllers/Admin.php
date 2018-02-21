@@ -371,4 +371,34 @@ class Admin extends MX_Controller
 		$this->template->call_admin_template($data);
 		$this->cek_login();
 	}
+
+	function profil()
+	{
+		$data['nav']='Admin/admin_nav_v';
+		$data['sidebar']='Admin/admin_sidebar_v';
+		$data['content']='Admin/admin_profile_v';
+		$data['data']=$this->Admin_m->get_detail_admin($this->session->userdata('admin'));
+		$data['menu']="Profil";
+		$data['menu2']=null;
+		$data['menu3']=null;
+		$this->template->call_admin_template($data);
+		$this->cek_login();	
+	}
+
+	function update_profil($id)
+	{
+		$data=$this->Admin_m->get_detail_admin($id);
+		$passlama=$this->input->post('passwordlama');
+		if (password_verify($passlama, $data['password'])) 
+		{
+			$this->Admin_m->update_admin($id);
+			$this->session->set_flashdata('alert', '<div class="alert alert-success">Data anda berhasil diubah</div>');
+			redirect('admin/profil');
+		}
+		else
+		{
+			$this->session->set_flashdata('alert', '<div class="alert alert-danger">Password lama anda salah</div>');
+			redirect('admin/profil');	
+		}	
+	}
 }

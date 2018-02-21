@@ -92,4 +92,34 @@ class Kontributor extends MX_Controller
 		$this->session->set_flashdata('alert', '<div class="alert alert-success">Doa berhasil diedit</div>');
 		redirect('kontributor');
 	}
+
+	function profil()
+	{
+		$data['nav']='Kontributor/kontributor_nav_v';
+		$data['sidebar']='Kontributor/kontributor_sidebar_v';
+		$data['content']='Kontributor/kontributor_profile_v';
+		$data['data']=$this->Kontributor_m->get_detail_kontributor($this->session->userdata('kontributor'));
+		$data['menu']="Profil";
+		$data['menu2']=null;
+		$data['menu3']=null;
+		$this->template->call_kontributor_template($data);
+		$this->cek_login();	
+	}
+
+	function update_profil($id)
+	{
+		$data=$this->Kontributor_m->get_detail_kontributor($id);
+		$passlama=$this->input->post('passwordlama');
+		if (password_verify($passlama, $data['password'])) 
+		{
+			$this->Kontributor_m->update_kontributor($id);
+			$this->session->set_flashdata('alert', '<div class="alert alert-success">Data anda berhasil diubah</div>');
+			redirect('kontributor/profil');
+		}
+		else
+		{
+			$this->session->set_flashdata('alert', '<div class="alert alert-danger">Password lama anda salah</div>');
+			redirect('kontributor/profil');	
+		}	
+	}
 }
