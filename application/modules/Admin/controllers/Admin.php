@@ -359,6 +359,33 @@ class Admin extends MX_Controller
 		}
 	}
 
+	function edit_kontributor($id)
+	{
+		$data['data']=$this->Admin_m->get_detail_kontributor($id);
+		$data['nav']='Admin/admin_nav_v';
+		$data['sidebar']='Admin/admin_sidebar_v';
+		$data['content']='Admin/admin_editkontributor_v';
+		$data['menu']="Kontributor";
+		$data['menu2']="Edit Kontributor";
+		$data['menu3']=null;
+		$this->template->call_admin_template($data);
+		$this->cek_login();	
+	}
+
+	function update_kontributor($id)
+	{
+		$this->Admin_m->update_kontributor($id);
+		$this->session->set_flashdata('alert', '<div class="alert alert-success">Data Kontributor berhasil diedit</div>');
+		redirect('admin/kontributor');
+	}
+
+	function delete_kontributor($id)
+	{
+		$this->Admin_m->delete_kontributor($id);
+		$this->session->set_flashdata('alert', '<div class="alert alert-success">Data Kontributor berhasil dihapus</div>');
+		redirect('admin/kontributor');
+	}
+
 	function log()
 	{
 		$data['nav']='Admin/admin_nav_v';

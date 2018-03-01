@@ -16,9 +16,16 @@ class Daftar_m extends CI_Model
 			'email'=>$this->input->post('email'),
 			'fullname'=>$this->input->post('fullname'),
 			'alamat'=>$this->input->post('alamat'),
-			'hp'=>$this->input->post('hp')
+			'hp'=>$this->input->post('hp'),
+			'status'=>'0'
 		);
 		$this->db->insert('kontributor', $data);
 		return $this->db->insert_id();
+	}
+
+	function get_kontributor($username)
+	{
+		$query=$this->db->get_where('kontributor', array('username'=>$username));
+		return $query->row_array();
 	}
 }

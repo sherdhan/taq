@@ -18,9 +18,18 @@ class Daftar extends MX_Controller
 	{
 		if ($this->input->post('passwordawal')==$this->input->post('password')) 
 		{
-			$this->Daftar_m->add_kontributor();
-			$this->session->set_flashdata('alert', '<div class="alert alert-success">Anda berhasil mendaftar</div>');
-			redirect('daftar');
+			$cekusername=$this->Daftar_m->get_kontributor($this->input->post('username'));
+			if ($cekusername['username']!=$this->input->post('username'))
+			{
+				$this->Daftar_m->add_kontributor();
+				$this->session->set_flashdata('alert', '<div class="alert alert-success">Anda berhasil mendaftar</div>');
+				redirect('daftar');
+			}
+			else
+			{
+				$this->session->set_flashdata('alert', '<div class="alert alert-warning">Username sudah ada</div>');
+				redirect('daftar');
+			}
 		}
 		else
 		{

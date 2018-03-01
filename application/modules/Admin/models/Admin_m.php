@@ -182,7 +182,8 @@ class Admin_m extends CI_Model
 			'email'=>$this->input->post('email'),
 			'fullname'=>$this->input->post('fullname'),
 			'alamat'=>$this->input->post('alamat'),
-			'hp'=>$this->input->post('hp')
+			'hp'=>$this->input->post('hp'),
+			'status'=>'0'
 		);
 
 		$this->db->insert('kontributor', $data);
@@ -193,6 +194,12 @@ class Admin_m extends CI_Model
 	{
 		$query=$this->db->get('kontributor');
 		return $query->result_array();
+	}
+
+	function get_detail_kontributor($id)
+	{
+		$query=$this->db->get_where('kontributor', array('id_kontributor'=>$id));
+		return $query->row_array();
 	}
 
 	function get_username_kontributor($username)
@@ -222,5 +229,20 @@ class Admin_m extends CI_Model
 
 		$this->db->where('id_admin', $id);
 		return $this->db->update('admin', $data);
+	}
+
+	function update_kontributor($id)
+	{
+		$data=array(
+			'status'=>$this->input->post('status')
+		);
+
+		$this->db->where('id_kontributor', $id);
+		return $this->db->update('kontributor', $data);
+	}
+
+	function delete_kontributor($id)
+	{
+		return $this->db->delete('kontributor', array('id_kontributor'=>$id));
 	}
 }

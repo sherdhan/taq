@@ -51,13 +51,21 @@ class Login extends MX_Controller
 			{
 				if (password_verify($pass, $cekkontributor['password'])) 
 				{
-					$datauser=array(
+					if ($cekkontributor['status']!=0)
+					{
+						$datauser=array(
 						'kontributor'=>$cekkontributor['id_kontributor'],
 						'user'=>$cekkontributor['fullname'],
 						'login'=>TRUE
-					);
-					$this->session->set_userdata($datauser);
-					redirect('kontributor');
+						);
+						$this->session->set_userdata($datauser);
+						redirect('kontributor');
+					}
+					else
+					{
+						$this->session->set_flashdata('alert', '<div class="alert alert-warning">Akun anda belum aktif</div>');
+						redirect(base_url());
+					}	
 				}
 				else
 				{
