@@ -11,7 +11,7 @@
 						</div>
 						<div class="card-body">
 							<div class="row">
-								<table class="table table-responsive-sm table-bordered table-striped table-sm">
+								<table class="table table-striped table-bordered datatable">
 									<thead>
 										<th style="width: 5%;">No</th>
 										<th>Do'a</th>

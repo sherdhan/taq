@@ -11,12 +11,12 @@
 						</div>
 						<div class="card-body">
 							<div class="row">
-								<table class="table table-responsive-sm table-bordered table-striped table-sm">
+								<table class="table table-striped table-bordered datatable">
 									<thead>
-										<th style="width: 5%;">No</th>
+										<th style="width: 1%;">No</th>
 										<th>Nama Do'a</th>
 										<th style="width: 8%;">Jumlah</th>
-										<th style="width: 7%;">Menu</th>
+										<th style="width: 3%;">Menu</th>
 									</thead>
 									<tbody>
 										<?php 

