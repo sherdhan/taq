@@ -399,6 +399,26 @@ class Admin extends MX_Controller
 		$this->cek_login();
 	}
 
+	function detail_log($id)
+	{
+		$data['nav']='Admin/admin_nav_v';
+		$data['sidebar']='Admin/admin_sidebar_v';
+		$data['content']='Admin/admin_detail_log_v';
+		$data['data']=$this->Admin_m->get_detail_log($id);
+		$data['menu']="Log";
+		$data['menu2']=null;
+		$data['menu3']=null;
+		$this->template->call_admin_template($data);
+		$this->cek_login();
+	}
+
+	function delete_log($id)
+	{
+		$this->Admin_m->delete_log($id);
+		$this->session->set_flashdata('alert', '<div class="alert alert-success">Data log berhasil dihapus</div>');
+		redirect('admin/log');
+	}
+
 	function profil()
 	{
 		$data['nav']='Admin/admin_nav_v';

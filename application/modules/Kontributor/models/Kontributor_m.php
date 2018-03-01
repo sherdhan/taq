@@ -8,17 +8,8 @@ class Kontributor_m extends CI_Model
 		parent::__construct();
 	}
 
-	function add_log($doa_sebelum)
+	function add_log($data)
 	{
-		date_default_timezone_set('Asia/Jakarta');
-		$data=array(
-			'id_kontributor'=>$this->session->userdata('kontributor'),
-			'kategori'=>$this->session->userdata('n_kat'),
-			'nama_doa'=>$this->session->userdata('n_item'),
-			'doa_sebelum'=>$doa_sebelum,
-			'doa_sesudah'=>$this->input->post('doa'),
-			'waktu'=>date('Y-m-d H:i:s')
-		);
 		$this->db->insert('log', $data);
 		return $this->db->insert_id();
 	}

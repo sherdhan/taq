@@ -82,22 +82,6 @@ class Admin_m extends CI_Model
 		return $query->result_array();
 	}
 
-	// function get_sidebar()
-	// {
-	// 	foreach ($this->get_all_kategori() as $row ) 
-	// 	{
-	// 		echo '<li class="nav-item nav-dropdown"><a class="nav-link nav-dropdown-toggle" href="#"><i class="fa fa-list-ul"></i>'.$row['n_kat'].'</a>';
- //            foreach ($this->get_detail_item($row['id_kat']) as $row) 
- //            {
- //            	echo '<ul class="nav-dropdown-items">
- //              <li class="nav-item">
- //                <a class="nav-link" href="#"><i class="fa fa-book"></i>'.$row['nomor'].'. '.$row['n_item'].'</a>
- //              </li></ul>';
- //            }
- //            echo '</li>';
-	// 	}
-	// }
-
 	function get_nomor_kategori()
 	{
 		$sql="SELECT max(nomor) AS number FROM kategori";
@@ -210,8 +194,20 @@ class Admin_m extends CI_Model
 
 	function get_all_log()
 	{
-		$query=$this->db->get('log');
+		$sql="SELECT kontributor.id_kontributor,fullname,id_log,kategori,nama_doa,waktu FROM log,kontributor WHERE log.id_kontributor=kontributor.id_kontributor ORDER BY id_log ASC";
+		$query=$this->db->query($sql);
 		return $query->result_array();
+	}
+
+	function get_detail_log($id)
+	{
+		$query=$this->db->get_where('log', array('id_log'=>$id));
+		return $query->row_array();
+	}
+
+	function delete_log($id)
+	{
+		return $this->db->delete('log', array('id_log'=>$id));
 	}
 
 	function get_detail_admin($id)

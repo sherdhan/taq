@@ -16,12 +16,11 @@
 	   <table class="table table-striped table-bordered datatable">
 		<thead>
 		<th style="width: 1%; vertical-align: middle;">No</th>
-		<th style="width: 1%; vertical-align: middle;">ID Kontributor</th>
-		<th style="width: 8%; vertical-align: middle;">Kategori</th>
-		<th style="width: 14%; vertical-align: middle;">Nama Do'a</th>
-		<th style="width: 14%; vertical-align: middle;">Do'a sebelum</th>
-		<th style="width: 14%; vertical-align: middle;">Do'a sesudah</th>
-		<th style="width: 3%; vertical-align: middle;">Waktu</th>
+		<th style="width: 5%; vertical-align: middle;">Nama Kontributor</th>
+		<th style="width: 10%; vertical-align: middle;">Kategori</th>
+		<th style="width: 10%; vertical-align: middle;">Nama Do'a</th>
+		<th style="width: 1%; vertical-align: middle;">Waktu</th>
+		<th style="width: 2%; vertical-align: middle; text-align: center;">Menu</th>
 	   </thead>
        <tbody>
 	   	<?php
@@ -30,14 +29,37 @@
 	   	{
 	   	?>
 	   		<tr>
-	   			<td><?php echo $no++; ?></td>
-	   			<td><?php echo $row['id_kontributor']; ?></td>
+	   			<td><?php echo $no; ?>.</td>
+	   			<td><?php echo $row['fullname']; ?></td>
 	   			<td><?php echo $row['kategori']; ?></td>
 	   			<td><?php echo $row['nama_doa']; ?></td>
-	   			<td style="text-align: right;font-family: 'Amiri';font-size: 14pt;"><?php echo $row['doa_sebelum']; ?></td>
-	   			<td style="text-align: right;font-family: 'Amiri';font-size: 14pt;"><?php echo $row['doa_sesudah']; ?></td>
 	   			<td><?php echo date("d-m-Y H:i:s", strtotime($row['waktu'])); ?></td>
-	   		</tr>
+	   			<td>
+	   				<a  href="<?php echo base_url('admin/detail_log/').$row['id_log']; ?>" class="btn btn-outline-info fa fa-search"></a>
+		   			<a><button data-toggle="modal" data-target="#<?php echo $row['id_log']; ?>" type="button" class="btn btn-outline-danger fa fa-trash-o"></button></a>
+	      		</td>
+		 	</tr>
+		 <div class="modal fade" id="<?php echo $row['id_log']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display: none;" aria-hidden="true">
+	<div class="modal-dialog modal-danger" role="document">
+		<div class="modal-content">
+		 	<div class="modal-header">
+		 	 	<h4 class="modal-title">Peringatan!</h4>
+		 	 	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		 	 		<span aria-hidden="true">x</span>
+		 	 	</button>
+		 	</div>
+		 	<div class="modal-body">
+		 		<p>
+		 				Apakah anda yakin ingin menghapus data nomor "<?php echo $no++; ?>"?
+		 		</p>
+		 	</div>
+		 	<div class="modal-footer">
+		 	  	<a href="<?php echo base_url('admin/delete_log/').$row['id_log']; ?>"><button type="button" class="btn btn-danger">Hapus</button></a>
+		 	  	<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		 	</div>
+		</div>
+	</div>
+</div>
 	   	<?php	
 	   	}
 	   	?>

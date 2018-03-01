@@ -86,8 +86,22 @@ class Kontributor extends MX_Controller
 	function update_doa($id)
 	{
 		$db=$this->Kontributor_m->get_detail_doa($id);
-		$doa_sebelum=$db['doa'];
-		$this->Kontributor_m->add_log($doa_sebelum);
+		date_default_timezone_set('Asia/Jakarta');
+		$data=array(
+			'id_kontributor'=>$this->session->userdata('kontributor'),
+			'kategori'=>$this->session->userdata('n_kat'),
+			'nama_doa'=>$this->session->userdata('n_item'),
+			'doa_sebelum'=>$db['doa'],
+			'doa_sesudah'=>$this->input->post('doa'),
+			'arti_sebelum'=>$db['arti'],
+			'arti_sesudah'=>$this->input->post('arti'),
+			'indo_sebelum'=>$db['indo'],
+			'indo_sesudah'=>$this->input->post('indo'),
+			'sumber_sebelum'=>$db['sumber'],
+			'sumber_sesudah'=>$this->input->post('sumber'),
+			'waktu'=>date('Y-m-d H:i:s')
+		);
+		$this->Kontributor_m->add_log($data);
 		$this->Admin_m->update_doa($id);
 		$this->session->set_flashdata('alert', '<div class="alert alert-success">Doa berhasil diedit</div>');
 		redirect('kontributor');
