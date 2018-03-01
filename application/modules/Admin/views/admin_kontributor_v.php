@@ -15,7 +15,7 @@
 	   <div id="not" style="width: 100%">
 	    <?php echo $this->session->flashdata('alert'); ?>	
 	   </div>
-	   <table class="table table-responsive-sm table-bordered table-striped table-sm">
+	   <table class="table table-striped table-bordered datatable">
 		<thead>
 		<th style="width: 1%;">id</th>
 		<th style="width: 10%;">Nama Kontributor</th>
@@ -48,5 +48,3 @@
 </div>
 </div>
 </div>
-
-		

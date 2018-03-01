@@ -23,10 +23,10 @@ class Api extends MX_Controller
 
 	function item($id=false)
 	{
-		$data['Item']=$this->Api_m->get_all_item();
 		header('Content-Type: application/json;charset=utf-8');
 		if ($id==false)
 		{
+			$data['Item']=$this->Api_m->get_all_item();
 			echo json_encode($data, JSON_PRETTY_PRINT);
 		}
 		else
@@ -38,10 +38,10 @@ class Api extends MX_Controller
 
 	function doa($id=false)
 	{
-		$data['Doa']=$this->Api_m->get_all_doa();
 		header('Content-Type: application/json;charset=utf-8');
 		if ($id==false)
 		{
+			$data['Doa']=$this->Api_m->get_all_doa();
 			echo json_encode($data, JSON_PRETTY_PRINT);
 		}
 		else

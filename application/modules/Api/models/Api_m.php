@@ -82,4 +82,3 @@ class Api_m extends CI_Model
 		return $text;
 	}
 }
-

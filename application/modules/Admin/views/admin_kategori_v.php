@@ -15,12 +15,12 @@
 	   <div id="not" style="width: 100%">
 	    <?php echo $this->session->flashdata('alert'); ?>	
 	   </div>
-	   <table class="table table-responsive-sm table-bordered table-striped table-sm">
+	   <table class="table table-striped table-bordered datatable">
 		<thead>
-		<th style="width: 5%;">No</th>
+		<th style="width: 1%;">No</th>
 		<th>Nama Kategori</th>
 		<th style="width: 8%;">Jumlah</th>
-		<th style="width: 14%;">Menu</th>
+		<th style="width: 16%;">Menu</th>
 	   </thead>
        <tbody>
 	    <?php
@@ -72,5 +72,3 @@
 </div>
 </div>
 </div>
-
-		

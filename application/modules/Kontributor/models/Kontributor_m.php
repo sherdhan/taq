@@ -19,7 +19,6 @@ class Kontributor_m extends CI_Model
 			'doa_sesudah'=>$this->input->post('doa'),
 			'waktu'=>date('Y-m-d H:i:s')
 		);
-
 		$this->db->insert('log', $data);
 		return $this->db->insert_id();
 	}
@@ -56,7 +55,6 @@ class Kontributor_m extends CI_Model
 			'hp'=>$this->input->post('hp')
 
 		);
-
 		$this->db->where('id_kontributor', $id);
 		return $this->db->update('kontributor', $data);
 	}

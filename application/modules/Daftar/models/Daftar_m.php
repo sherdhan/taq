@@ -18,7 +18,6 @@ class Daftar_m extends CI_Model
 			'alamat'=>$this->input->post('alamat'),
 			'hp'=>$this->input->post('hp')
 		);
-
 		$this->db->insert('kontributor', $data);
 		return $this->db->insert_id();
 	}

@@ -13,15 +13,15 @@
 	   <div id="not" style="width: 100%">
 	    <?php echo $this->session->flashdata('alert'); ?>	
 	   </div>
-	   <table class="table table-responsive-sm table-bordered table-striped table-sm">
+	   <table class="table table-striped table-bordered datatable">
 		<thead>
-		<th style="width: 1%;">No</th>
-		<th style="width: 5%;">ID Kontributor</th>
-		<th style="width: 8%;">Kategori</th>
-		<th style="width: 14%;">Nama Do'a</th>
-		<th style="width: 14%;">Do'a sebelum</th>
-		<th style="width: 14%;">Do'a sesudah</th>
-		<th style="width: 4%;">Waktu</th>
+		<th style="width: 1%; vertical-align: middle;">No</th>
+		<th style="width: 1%; vertical-align: middle;">ID Kontributor</th>
+		<th style="width: 8%; vertical-align: middle;">Kategori</th>
+		<th style="width: 14%; vertical-align: middle;">Nama Do'a</th>
+		<th style="width: 14%; vertical-align: middle;">Do'a sebelum</th>
+		<th style="width: 14%; vertical-align: middle;">Do'a sesudah</th>
+		<th style="width: 3%; vertical-align: middle;">Waktu</th>
 	   </thead>
        <tbody>
 	   	<?php
@@ -51,5 +51,3 @@
 </div>
 </div>
 </div>
-
-		
