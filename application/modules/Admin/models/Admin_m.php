@@ -10,9 +10,6 @@ class Admin_m extends CI_Model
 	
 	function get_all_item($id)
 	{
-		// $this->db->order_by('nomor', 'asc');
-		// $query=$this->db->get_where('item', array('id_kat'=>$id));
-		// return $query->result_array();
 		$sql="SELECT count(item.id_item) AS jumlah,n_item,doa.id_item, item.nomor FROM item,doa WHERE item.id_item=doa.id_item AND item.id_kat=".$id." GROUP BY item.id_item ORDER BY nomor ASC";
 		$query=$this->db->query($sql);
 		return $query->result_array();	

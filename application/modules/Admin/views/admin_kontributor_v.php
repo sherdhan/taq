@@ -22,7 +22,8 @@
 		<th style="width: 8%;">E-mail</th>
 		<th style="width: 14%;">Alamat</th>
 		<th style="width: 1%;">No. HP</th>
-		<th style="width: 3%;">Menu</th>
+		<th style="width: 1%;">Status</th>
+		<th style="width: 5%;">Menu</th>
 	   </thead>
        <tbody>
 	   	<?php  
@@ -35,6 +36,16 @@
 	   			<td><?php echo $row['email'] ?></td>
 	   			<td><?php echo $row['alamat'] ?></td>
 	   			<td><?php echo $row['hp'] ?></td>
+	   			<?php  
+	   			if ($row['status']==1) 
+	   			{ ?>
+	   				<td style="text-align: center;"><span class="badge badge-success">Aktif</span></td>
+	   	  <?php }
+	   	  		else
+	   	  		{ ?>
+	   	  			<td style="text-align: center;"><span class="badge badge-danger">Tidak Aktif</span></td>
+	   	  <?php }
+	   			?>
 	   			<td style="text-align: center; ">
 		   <a  href="<?php echo base_url('admin/edit_kontributor/').$row['id_kontributor']; ?>" class="btn btn-outline-warning fa fa-pencil"></a>
 		   <a ><button data-toggle="modal" data-target="#<?php echo $row['id_kontributor']; ?>" type="button" class="btn btn-outline-danger fa fa-trash-o"></button></a>
