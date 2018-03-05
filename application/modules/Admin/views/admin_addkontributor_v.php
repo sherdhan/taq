@@ -14,40 +14,33 @@
                   <?php echo $this->session->flashdata('alert'); ?> 
                 </div>
                 <form action="<?php echo base_url('admin/add_kontributor'); ?>" method="POST" data-parsley-validate enctype="multipart/form-data" style="width: 100%">
-
                   <div class="form-group">
-                    <label style="margin-left: 20%;">Nama Lengkap</label>
-                    <input type="text" required="required" class="col-md-4"  name="fullname">
+                    <label for="number1" style="margin-left: 25%;">Nama Lengkap</label>
+                    <input id="number1" style="margin-left: 25%;" type="text" required class="form-control col-md-4" name="fullname" placeholder="Nama Lengkap">
                   </div>
-
                   <div class="form-group">
-                    <label style="margin-left: 25%;">Alamat</label>
-                    <textarea required class="col-md-4" name="alamat"></textarea>
+                    <label for="number2" style="margin-left: 25%;">Alamat</label>
+                    <textarea id="number2" style="margin-left: 25%;" required class="form-control col-md-4" name="alamat" placeholder="Alamat Kontributor"></textarea>
                   </div>
-
                   <div class="form-group">
-                    <label style="margin-left: 25.5%;">E-mail</label>
-                    <input type="email" required class="col-md-4"  name="email">
+                    <label for="number3" style="margin-left: 25%;">E-mail</label>
+                    <input id="number3" style="margin-left: 25%;" type="email" required class="form-control col-md-4"  name="email" placeholder="E-mail Kontributor">
                   </div>
-
                   <div class="form-group">
-                    <label style="margin-left: 25%;">No. HP</label>
-                    <input type="number" required class="col-md-4"  name="hp">
+                    <label for="number4" style="margin-left: 25%;">No. HP</label>
+                    <input id="number4" style="margin-left: 25%;" type="number" required class="form-control col-md-4"  name="hp" placeholder="No. HP Kontributor">
                   </div>
-
                   <div class="form-group">
-                    <label style="margin-left: 23.2%;">Username</label>
-                    <input type="text" required class="col-md-4"  name="username">
+                    <label for="number5" style="margin-left: 25%;">Username</label>
+                    <input id="number5" style="margin-left: 25%;" type="text" required class="form-control col-md-4"  name="username" placeholder="Username Kontributor">
                   </div>
-
                   <div class="form-group">
-                    <label style="margin-left: 23.5%;">Password</label>
-                    <input type="password" required="required" class="col-md-4"  name="password">
+                    <label for="number6" style="margin-left: 25%;">Password</label>
+                    <input id="number6" style="margin-left: 25%;" type="password" required class="form-control col-md-4"  name="password" placeholder="Password Kontributor">
                   </div>
-
                   <div class="ln_solid"></div>
                   <div class="form-group">
-                    <div style="margin-left: 30%;">
+                    <div style="margin-left: 25%;">
                       <button class="btn btn-success">Simpan</button>
                       <button class="btn btn-primary" type="reset">Reset</button>
                       <button class="btn btn-outline-secondary" onclick="window.history.go(-1); return false;">Kembali</button>

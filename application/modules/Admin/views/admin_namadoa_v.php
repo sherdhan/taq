@@ -49,7 +49,7 @@
 		 		</p>
 		 	</div>
 		 	<div class="modal-footer">
-		 	  	<a href="<?php echo base_url('admin/delete_namadoa/').$row['id_kat']; ?>" ><button type="button" class="btn btn-danger">Hapus</button></a>
+		 	  	<a href="<?php echo base_url('admin/delete_namadoa/').$row['id_item']; ?>" ><button type="button" class="btn btn-danger">Hapus</button></a>
 		 	  	<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 		 	</div>
 		</div>

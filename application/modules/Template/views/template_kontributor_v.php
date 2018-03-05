@@ -25,7 +25,7 @@
 
   <link href="<?php echo base_url('assets/template/vendors/css/daterangepicker.min.css'); ?>" rel="stylesheet">
   <link href="<?php echo base_url('assets/template/vendors/css/gauge.min.css'); ?>" rel="stylesheet">
-  <link href="<?php echo base_url('assets/template/vendors/css/toastr.min.css'); ?>" rel="stylesheet">
+  <!-- <link href="<?php echo base_url('assets/template/vendors/css/toastr.min.css'); ?>" rel="stylesheet"> -->
 
   <link href="<?php echo base_url('assets/template/vendors/css/dataTables.bootstrap4.min.css'); ?>" rel="stylesheet">
   <!-- Styles required by this views -->
@@ -422,7 +422,7 @@
 <script src="<?php echo base_url('assets/template/vendors/js/jquery.dataTables.min.js'); ?>"></script>
 <script src="<?php echo base_url('assets/template/vendors/js/dataTables.bootstrap4.min.js'); ?>"></script>
 
-<script src="<?php echo base_url('assets/template/vendors/js/toastr.min.js'); ?>"></script>
+<!-- <script src="<?php echo base_url('assets/template/vendors/js/toastr.min.js'); ?>"></script> -->
 <script src="<?php echo base_url('assets/template/vendors/js/gauge.min.js'); ?>"></script>
 <script src="<?php echo base_url('assets/template/vendors/js/moment.min.js'); ?>"></script>
 <script src="<?php echo base_url('assets/template/vendors/js/daterangepicker.min.js'); ?>"></script>

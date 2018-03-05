@@ -14,30 +14,25 @@
                   <?php echo $this->session->flashdata('alert'); ?> 
                 </div>
                 <form action="<?php echo base_url('admin/update_kontributor/').$data['id_kontributor']; ?>" method="POST" data-parsley-validate enctype="multipart/form-data" style="width: 100%">
-
                   <div class="form-group">
-                    <label style="margin-left: 20%;">Nama Lengkap</label>
-                    <input disabled type="text" required="required" class="col-md-4"  name="fullname" value="<?php echo $data['fullname']; ?>">
+                    <label for="number1" style="margin-left: 25%;">Nama Lengkap</label>
+                    <input id="number1" style="margin-left: 25%;" type="text" required class="form-control col-md-4" name="fullname" placeholder="Nama Lengkap" value="<?php echo $data['fullname']; ?>">
                   </div>
-
                   <div class="form-group">
-                    <label style="margin-left: 25%;">Alamat</label>
-                    <textarea disabled required class="col-md-4" name="alamat"><?php echo $data['alamat']; ?></textarea>
+                    <label for="number2" style="margin-left: 25%;">Alamat</label>
+                    <textarea id="number2" style="margin-left: 25%;" required class="form-control col-md-4" name="alamat" placeholder="Alamat Kontributor"><?php echo $data['alamat']; ?></textarea>
                   </div>
-
                   <div class="form-group">
-                    <label style="margin-left: 25.5%;">E-mail</label>
-                    <input type="email" required class="col-md-4"  name="email" value="<?php echo $data['email']; ?>" disabled>
+                    <label for="number3" style="margin-left: 25%;">E-mail</label>
+                    <input id="number3" style="margin-left: 25%;" type="email" required class="form-control col-md-4"  name="email" placeholder="E-mail Kontributor" value="<?php echo $data['email']; ?>">
                   </div>
-
                   <div class="form-group">
-                    <label style="margin-left: 25%;">No. HP</label>
-                    <input type="number" required class="col-md-4"  name="hp" value="<?php echo $data['hp']; ?>" disabled>
+                    <label for="number4" style="margin-left: 25%;">No. HP</label>
+                    <input id="number4" style="margin-left: 25%;" type="number" required class="form-control col-md-4"  name="hp" placeholder="No. HP Kontributor" value="<?php echo $data['hp']; ?>">
                   </div>
-
                   <div class="form-group">
-                    <label style="margin-left: 25.5%;">Status</label>
-                    <select  required class="col-md-4" name="status">
+                    <label for="number5" style="margin-left: 25%;">Status</label>
+                    <select id="number5" style="margin-left: 25%;" required class="form-control col-md-4" name="status">
                       <?php  
                       if ($data['status']==1) 
                       { ?>
@@ -55,7 +50,7 @@
 
                   <div class="ln_solid"></div>
                   <div class="form-group">
-                    <div style="margin-left: 30%;">
+                    <div style="margin-left: 25%;">
                       <button class="btn btn-warning">Edit</button>
                       <button class="btn btn-outline-secondary" onclick="window.history.go(-1); return false;">Kembali</button>
                     </div>
