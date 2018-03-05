@@ -16,39 +16,38 @@
         <form action="<?php echo base_url('kontributor/update_doa/').$data['id_doa']; ?>" method="POST" data-parsley-validate enctype="multipart/form-data" style="width: 100%">
          
          <div class="form-group">
-           <label style="margin-left: 25%;">Nomor</label>
-           <input type="number" required="required" class="col-md-1" name="nomor" value="<?php echo $data['nomor']; ?>">
+           <label for="number1" style="margin-left: 25%;">Nomor</label>
+           <input id="number1" style="margin-left: 25%;" type="number" required class="form-control col-md-1" name="nomor" value="<?php echo $data['nomor']; ?>">
          </div>
 
          <div class="form-group">
-           <label style="margin-left: 26.5%;">Do'a</label>
-           <textarea name="doa" class="col-md-7" style="direction: rtl; text-align: right;font-family: 'Amiri';font-size: 14pt;" required><?php echo $data['doa']; ?></textarea>
+           <label for="number2" style="margin-left: 25%;">Do'a</label>
+           <textarea id="number2" style="margin-left: 25%;" name="doa" class="form-control col-md-7" style="direction: rtl; text-align: right;font-family: 'Amiri';font-size: 14pt;" required><?php echo $data['doa']; ?></textarea>
          </div>
 
          <div class="form-group">
-           <label style="margin-left: 27%;">Arti</label>
-           <textarea name="arti" class="col-md-7" required><?php echo $data['arti']; ?></textarea>
+           <label for="number3" style="margin-left: 25%;">Arti</label>
+           <textarea id="number3" style="margin-left: 25%;" name="arti" class="form-control col-md-7" required><?php echo $data['arti']; ?></textarea>
          </div>
 
          <div class="form-group">
-           <label style="margin-left: 23%;">Cara Baca</label>
-           <textarea name="indo" class="col-md-7" required><?php echo $data['indo']; ?></textarea>
+           <label for="number4" style="margin-left: 25%;">Cara Baca</label>
+           <textarea id="number4" style="margin-left: 25%;" name="indo" class="form-control col-md-7" required><?php echo $data['indo']; ?></textarea>
          </div>
 
          <div class="form-group">
-           <label style="margin-left: 24.7%;">Dibaca</label>
-           <input  name="kali" class="col-md-1" required value="<?php echo $data['kali']; ?>"></input>
-           <label">Kali</label>
+           <label for="number5" style="margin-left: 25%;">Dibaca</label>
+           <input id="number5" style="margin-left: 25%;" name="kali" class="form-control col-md-1" required value="<?php echo $data['kali']; ?>"></input>
          </div> 
 
          <div class="form-group">
-           <label style="margin-left: 24%;">Sumber</label>
-           <input name="sumber" class="col-md-7" required value="<?php echo $data['sumber']; ?>"></input>
+           <label for="number6" style="margin-left: 25%;">Sumber</label>
+           <input id="number6" style="margin-left: 25%;" name="sumber" class="form-control col-md-7" required value="<?php echo $data['sumber']; ?>"></input>
          </div>          
 
          <div class="ln_solid"></div>
          <div class="form-group">
-          <div style="margin-left: 30%;">
+          <div style="margin-left: 25%;">
             <button class="btn btn-warning">Edit</button>
             <button class="btn btn-outline-secondary" onclick="window.history.go(-1); return false;">Kembali</button>
           </div>

@@ -11,6 +11,9 @@
 						</div>
 						<div class="card-body">
 							<div class="row">
+								<div id="not" style="width: 100%">
+						          <?php echo $this->session->flashdata('alert'); ?> 
+						        </div> 
 								<table class="table table-striped table-bordered datatable">
 									<thead>
 										<th style="width: 5%;">No</th>

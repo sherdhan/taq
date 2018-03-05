@@ -16,33 +16,33 @@
                 <form action="<?php echo base_url('admin/update_profil/').$data['id_admin']; ?>" method="POST" data-parsley-validate enctype="multipart/form-data" style="width: 100%">
 
                   <div class="form-group">
-                    <label style="margin-left: 25%;">Nama Lengkap</label>
-                    <input disabled type="text" required="required" class="col-md-4"  name="fullname" value="<?php echo $data['fullname']; ?>">
+                    <label for="number1" style="margin-left: 25%;">Nama Lengkap</label>
+                    <input id="number1" style="margin-left: 25%;" disabled type="text" required class="form-control col-md-4"  name="fullname" value="<?php echo $data['fullname']; ?>">
                   </div>
 
                   <div class="form-group">
-                    <label style="margin-left: 30.4%;">E-mail</label>
-                    <input type="text" name="email" class="col-md-4" required="required" value="<?php echo $data['email']; ?>">
+                    <label for="number2" style="margin-left: 25%;">E-mail</label>
+                    <input id="number2" style="margin-left: 25%;" type="text" name="email" class="form-control col-md-4" required value="<?php echo $data['email']; ?>">
                   </div>
 
                   <div class="form-group">
-                    <label style="margin-left: 28%;">Username</label>
-                    <input disabled type="text" required="required" class="col-md-4"  name="username" value="<?php echo $data['username']; ?>">
+                    <label for="number3" style="margin-left: 25%;">Username</label>
+                    <input id="number3" style="margin-left: 25%;" disabled type="text" required class="form-control col-md-4"  name="username" value="<?php echo $data['username']; ?>">
                   </div>
 
                   <div class="form-group">
-                    <label style="margin-left: 24.7%;">Password Lama</label>
-                    <input type="password" required="required" class="col-md-4"  name="passwordlama">
+                    <label for="number4" style="margin-left: 25%;">Password Lama</label>
+                    <input id="number4" style="margin-left: 25%;" type="password" required class="form-control col-md-4"  name="passwordlama">
                   </div>
 
                   <div class="form-group">
-                    <label style="margin-left: 25.2%;">Password Baru</label>
-                    <input type="password" required="required" class="col-md-4"  name="password" >
+                    <label for="number5" style="margin-left: 25%;">Password Baru</label>
+                    <input id="number5" style="margin-left: 25%;" type="password" required class="form-control col-md-4"  name="password" >
                   </div>
 
                   <div class="ln_solid"></div>
                   <div class="form-group">
-                    <div style="margin-left: 30%;">
+                    <div style="margin-left: 25%;">
                       <button class="btn btn-warning">Edit</button>
                       <button class="btn btn-outline-secondary" onclick="window.history.go(-1); return false;">Kembali</button>
                     </div>

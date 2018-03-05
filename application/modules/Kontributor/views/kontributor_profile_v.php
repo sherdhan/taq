@@ -16,43 +16,43 @@
                 <form action="<?php echo base_url('kontributor/update_profil/').$data['id_kontributor']; ?>" method="POST" data-parsley-validate enctype="multipart/form-data" style="width: 100%">
 
                   <div class="form-group">
-                    <label style="margin-left: 25%;">Nama Lengkap</label>
-                    <input disabled type="text" required="required" class="col-md-4"  name="fullname" value="<?php echo $data['fullname']; ?>">
+                    <label for="number1" style="margin-left: 25%;">Nama Lengkap</label>
+                    <input id="number1" style="margin-left: 25%;" disabled type="text" required class="form-control col-md-4"  name="fullname" value="<?php echo $data['fullname']; ?>">
                   </div>
 
                   <div class="form-group">
-                    <label style="margin-left: 30.4%;">E-mail</label>
-                    <input disabled type="text" name="email" class="col-md-4" required="required" value="<?php echo $data['email']; ?>">
+                    <label for="number2" style="margin-left: 25%;">E-mail</label>
+                    <input id="number2" style="margin-left: 25%;" disabled type="text" name="email" class="form-control col-md-4" required value="<?php echo $data['email']; ?>">
                   </div>
 
                   <div class="form-group">
-                    <label style="margin-left: 30%;">Alamat</label>
-                    <textarea required class="col-md-4" name="alamat"><?php echo $data['alamat']; ?></textarea>
+                    <label for="number3" style="margin-left: 25%;">Alamat</label>
+                    <textarea id="number3" style="margin-left: 25%;" required class="form-control col-md-4" name="alamat"><?php echo $data['alamat']; ?></textarea>
                   </div>
 
                   <div class="form-group">
-                    <label style="margin-left: 30%;">No. HP</label>
-                    <input type="number" name="hp" class="col-md-4" required="required" value="<?php echo $data['hp']; ?>">
+                    <label for="number4" style="margin-left: 25%;">No. HP</label>
+                    <input id="number4" style="margin-left: 25%;" type="number" name="hp" class="form-control col-md-4" required value="<?php echo $data['hp']; ?>">
                   </div>
 
                   <div class="form-group">
-                    <label style="margin-left: 28.2%;">Username</label>
-                    <input disabled type="text" name="username" class="col-md-4" required="required" value="<?php echo $data['username']; ?>">
+                    <label for="number5" style="margin-left: 25%;">Username</label>
+                    <input id="number5" style="margin-left: 25%;" disabled type="text" name="username" class="form-control col-md-4" required value="<?php echo $data['username']; ?>">
                   </div>
 
                   <div class="form-group">
-                    <label style="margin-left: 24.9%;">Password Lama</label>
-                    <input type="password" required="required" class="col-md-4"  name="passwordlama">
+                    <label for="number6" style="margin-left: 25%;">Password Lama</label>
+                    <input id="number6" style="margin-left: 25%;" type="password" required class="form-control col-md-4"  name="passwordlama" placeholder="Password Lama">
                   </div>
 
                   <div class="form-group">
-                    <label style="margin-left: 25.4%;">Password Baru</label>
-                    <input type="password" required="required" class="col-md-4"  name="password" >
+                    <label for="number7" style="margin-left: 25%;">Password Baru</label>
+                    <input id="number7" style="margin-left: 25%;" type="password" required class="form-control col-md-4"  name="password" placeholder="Password Baru">
                   </div>
 
                   <div class="ln_solid"></div>
                   <div class="form-group">
-                    <div style="margin-left: 30%;">
+                    <div style="margin-left: 25%;">
                       <button class="btn btn-warning">Edit</button>
                       <button class="btn btn-outline-secondary" onclick="window.history.go(-1); return false;">Kembali</button>
                     </div>
