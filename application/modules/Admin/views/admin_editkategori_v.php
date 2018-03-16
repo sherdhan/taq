@@ -13,10 +13,10 @@
                 <div id="not" style="width: 100%">
                   <?php echo $this->session->flashdata('alert'); ?> 
                 </div>
-                <form action="<?php echo base_url('admin/update_kategori/').$data['id_kat']; ?>" method="POST" data-parsley-validate enctype="multipart/form-data" style="width: 100%">
+                <form action="<?php echo base_url('Admin/update_kategori/').$data['id_kat']; ?>" method="POST" data-parsley-validate enctype="multipart/form-data" style="width: 100%">
                   <div class="form-group">
                     <label for="number1" style="margin-left: 25%;">Nomor</label>
-                    <input id="number1" style="margin-left: 25%;" class="form-control col-md-2" type="number" name="nomor" value="<?php echo $data['nomor']+1; ?>">
+                    <input id="number1" style="margin-left: 25%;" class="form-control col-md-2" type="number" name="nomor" value="<?php echo $data['nomor']; ?>">
                   </div>
                   <div class="form-group">
                     <label for="number2" style="margin-left: 25%;">Nama Kategori *</label>

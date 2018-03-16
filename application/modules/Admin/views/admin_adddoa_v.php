@@ -5,7 +5,7 @@
     <div class="col-lg-12 col-md-12 col-sm-12">
      <div class="card">
       <div class="card-header">
-       <strong>Nama Do'a</strong>
+       <strong>Do'a</strong>
        <small>Tambah Data</small>
       </div>
       <div class="card-body">
@@ -13,7 +13,7 @@
         <div id="not" style="width: 100%">
           <?php echo $this->session->flashdata('alert'); ?> 
         </div> 
-        <form action="<?php echo base_url('admin/add_doa'); ?>" method="POST" data-parsley-validate enctype="multipart/form-data" style="width: 100%">
+        <form action="<?php echo base_url('Admin/add_doa'); ?>" method="POST" data-parsley-validate enctype="multipart/form-data" style="width: 100%">
           
          <div class="form-group">
           <label for="number1" style="margin-left: 25%;">Nama Do'a</label>

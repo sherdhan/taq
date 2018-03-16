@@ -7,7 +7,7 @@ class Login extends MX_Controller
 	{
 		parent::__construct();
 		$this->load->model('Login_m');
-		$this->load->module('admin');
+		$this->load->module('Admin');
 		$this->load->helper('url');
 	}
 
@@ -16,7 +16,7 @@ class Login extends MX_Controller
 		$this->load->view('login_v', $data);
 		if($this->session->userdata('admin'))
 		{
-			redirect('admin');
+			redirect('Admin');
 		}	
 	}
 
@@ -39,7 +39,7 @@ class Login extends MX_Controller
 						'login'=>TRUE
 					);
 					$this->session->set_userdata($datauser);
-					redirect('admin');
+					redirect('Admin');
 				}
 				else
 				{
@@ -59,7 +59,7 @@ class Login extends MX_Controller
 						'login'=>TRUE
 						);
 						$this->session->set_userdata($datauser);
-						redirect('kontributor');
+						redirect('Kontributor');
 					}
 					else
 					{

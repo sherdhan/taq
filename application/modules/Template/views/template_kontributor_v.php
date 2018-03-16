@@ -90,7 +90,7 @@
       <!-- Breadcrumb -->
       <ol class="breadcrumb">
         <li class="breadcrumb-item">Home</li>
-        <li class="breadcrumb-item"><a href="<?php echo base_url('kontributor'); ?>">Kontributor</a></li>
+        <li class="breadcrumb-item"><a href="<?php echo base_url('Kontributor'); ?>">Kontributor</a></li>
         <?php  
         if ($menu!="")
         {

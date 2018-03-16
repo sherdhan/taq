@@ -13,7 +13,7 @@
                 <div id="not" style="width: 100%">
                   <?php echo $this->session->flashdata('alert'); ?> 
                 </div>
-                <form action="<?php echo base_url('admin/update_profil/').$data['id_admin']; ?>" method="POST" data-parsley-validate enctype="multipart/form-data" style="width: 100%">
+                <form action="<?php echo base_url('Admin/update_profil/').$data['id_admin']; ?>" method="POST" data-parsley-validate enctype="multipart/form-data" style="width: 100%">
 
                   <div class="form-group">
                     <label for="number1" style="margin-left: 25%;">Nama Lengkap</label>

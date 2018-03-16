@@ -5,7 +5,7 @@
     <div class="col-lg-12 col-md-12 col-sm-12">
 	 <div class="card">
 	  <div class="card-header">
-	  <strong>Kontributor</strong>
+	  <strong>Log</strong>
 	  <small>Data</small>
 	  </div>
 	 <div class="card-body">
@@ -35,7 +35,7 @@
 	   			<td><?php echo $row['nama_doa']; ?></td>
 	   			<td><?php echo date("d-m-Y H:i:s", strtotime($row['waktu'])); ?></td>
 	   			<td>
-	   				<a  href="<?php echo base_url('admin/detail_log/').$row['id_log']; ?>" class="btn btn-outline-info fa fa-search"></a>
+	   				<a  href="<?php echo base_url('Admin/detail_log/').$row['id_log']; ?>" class="btn btn-outline-info fa fa-search"></a>
 		   			<a><button data-toggle="modal" data-target="#<?php echo $row['id_log']; ?>" type="button" class="btn btn-outline-danger fa fa-trash-o"></button></a>
 	      		</td>
 		 	</tr>
@@ -54,7 +54,7 @@
 		 		</p>
 		 	</div>
 		 	<div class="modal-footer">
-		 	  	<a href="<?php echo base_url('admin/delete_log/').$row['id_log']; ?>"><button type="button" class="btn btn-danger">Hapus</button></a>
+		 	  	<a href="<?php echo base_url('Admin/delete_log/').$row['id_log']; ?>"><button type="button" class="btn btn-danger">Hapus</button></a>
 		 	  	<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 		 	</div>
 		</div>

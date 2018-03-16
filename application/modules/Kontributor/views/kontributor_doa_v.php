@@ -31,7 +31,7 @@
 												<td style="text-align: right;font-family: 'Amiri';font-size: 14pt;"><?php echo $row['doa']; ?></td>
 												<td style="text-align: center; vertical-align: middle;"><?php echo $row['kali']; ?> X</td>
 												<td style="text-align: center; vertical-align: middle;">
-												   <a  href="<?php echo base_url('kontributor/edit_doa/').$row['id_doa']; ?>" class="btn btn-outline-warning fa fa-pencil"></a>
+												   <a  href="<?php echo base_url('Kontributor/edit_doa/').$row['id_doa']; ?>" class="btn btn-outline-warning fa fa-pencil"></a>
 												</td>
 											</tr>
 										<?php	

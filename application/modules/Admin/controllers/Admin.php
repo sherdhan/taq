@@ -7,8 +7,10 @@ class Admin extends MX_Controller
 	{
 		parent::__construct();
 		$this->load->module('Template');
+                $this->load->module('Kontributor');
 		$this->load->helper('url');
 		$this->load->model('Admin_m');
+                $this->load->model('Kontributor_m');
 	}
 
 	function index()
@@ -65,20 +67,20 @@ class Admin extends MX_Controller
 			if ($this->input->post('n_kat')!=$data['n_kat'])
 			{
 				$this->Admin_m->add_kategori();
-				$this->session->set_flashdata('alert', '<div class="alert alert-success">Berhasil menambahkan kategori</div>');
-				redirect('admin/kategori');	
+				$this->session->set_flashdata('alert', '<div class="alert alert-success">Berhasil menambahkan kategori. Kategori tersebut belum ditampilkan dikarenakan belum ada data Nama Doa</div>');
+				redirect('Admin/kategori');	
 			}
 			else
 			{
 				$this->session->set_flashdata('alert', '<div class="alert alert-warning">Nama Kategori sudah ada</div>');
-				redirect('admin/kategori');
+				redirect('Admin/kategori');
 			}
 
 		}
 		else
 		{
 			$this->session->set_flashdata('alert', '<div class="alert alert-warning">Nomor Kategori sudah ada</div>');
-			redirect('admin/kategori');
+			redirect('Admin/kategori');
 		}
 
 	}
@@ -87,7 +89,7 @@ class Admin extends MX_Controller
 	{
 		$this->Admin_m->delete_kategori($id);
 		$this->session->set_flashdata('alert', '<div class="alert alert-success">Data berhasil dihapus</div>');
-		redirect('admin/kategori');
+		redirect('Admin/kategori');
 	}
 
 	function create_kategori()
@@ -121,12 +123,12 @@ class Admin extends MX_Controller
 		{
 			$this->Admin_m->update_kategori($id);
 			$this->session->set_flashdata('alert', '<div class="alert alert-success">kategori berhasil diedit</div>');
-			redirect('admin/kategori');	
+			redirect('Admin/kategori');	
 		}
 		else
 		{
 			$this->session->set_flashdata('alert', '<div class="alert alert-warning">Nama Kategori sama atau sudah ada</div>');
-			redirect('admin/edit_kategori/'.$id);
+			redirect('Admin/edit_kategori/'.$id);
 		}
 	}
 
@@ -171,25 +173,25 @@ class Admin extends MX_Controller
 				{
 					$this->Admin_m->add_item();
 					$this->session->set_flashdata('alert', '<div class="alert alert-success">Berhasil menambahkan nama Doa</div>');
-					redirect('admin/nama_doa/'.$this->session->userdata('id_item'));	
+					redirect('Admin/nama_doa/'.$this->session->userdata('id_item'));	
 				}
 				else
 				{
 					$this->session->set_flashdata('alert', '<div class="alert alert-warning">Silahkan pilih Kategori</div>');
-					redirect('admin/tambah_nama_doa');
+					redirect('Admin/tambah_nama_doa');
 				}
 				
 			}
 			else
 			{
 				$this->session->set_flashdata('alert', '<div class="alert alert-warning">Nama Doa tersebut sudah ada</div>');
-				redirect('admin/tambah_nama_doa');
+				redirect('Admin/tambah_nama_doa');
 			}
 		}
 		else
 		{
 			$this->session->set_flashdata('alert', '<div class="alert alert-warning">Nomor tersebut sudah ada</div>');
-			redirect('admin/tambah_nama_doa');
+			redirect('Admin/tambah_nama_doa');
 		}
 	}
 
@@ -224,12 +226,12 @@ class Admin extends MX_Controller
 		{
 			$this->Admin_m->update_namadoa($id);
 			$this->session->set_flashdata('alert', '<div class="alert alert-success">Nama Doa berhasil diedit</div>');
-			redirect('admin/nama_doa'.$this->session->userdata('id_item'));	
+			redirect('Admin/nama_doa/'.$this->session->userdata('id_item'));	
 		}
 		else
 		{
 			$this->session->set_flashdata('alert', '<div class="alert alert-warning">Nama Doa sama</div>');
-			redirect('admin/edit_namadoa/'.$id);
+			redirect('Admin/edit_namadoa/'.$id);
 		}
 	}
 
@@ -272,19 +274,19 @@ class Admin extends MX_Controller
 			{
 				$this->Admin_m->add_doa();
 				$this->session->set_flashdata('alert', '<div class="alert alert-success">Berhasil menambahkan Doa</div>');
-				redirect('admin/doa/'.$this->session->userdata('id_doa'));
+				redirect('Admin/doa/'.$this->input->post('id_item'));
 			}
 			else
 			{
 				$this->session->set_flashdata('alert', '<div class="alert alert-warning">Silahkan Pilih Nama Doa</div>');
-				redirect('admin/tambah_doa');
+				redirect('Admin/tambah_doa');
 			}
 			
 		}
 		else
 		{
 			$this->session->set_flashdata('alert', '<div class="alert alert-warning">Nomor tersebut sudah ada</div>');
-			redirect('admin/tambah_doa');
+			redirect('Admin/tambah_doa');
 		}
 	}
 
@@ -305,7 +307,7 @@ class Admin extends MX_Controller
 	{
 		$this->Admin_m->update_doa($id);
 		$this->session->set_flashdata('alert', '<div class="alert alert-success">Doa berhasil diedit</div>');
-		redirect('admin/doa/'.$this->session->userdata('id_doa'));
+		redirect('Admin/doa/'.$this->session->userdata('id_doa'));
 	}
 
 	function kontributor()
@@ -325,14 +327,14 @@ class Admin extends MX_Controller
 	{
 		$this->Admin_m->delete_doa($id);
 		$this->session->set_flashdata('alert', '<div class="alert alert-success">Doa berhasil dihapus</div>');
-		redirect('admin/doa/'.$this->session->userdata('id_doa'));
+		redirect('Admin/doa/'.$this->session->userdata('id_doa'));
 	}
 
 	function delete_namadoa($id)
 	{
 		$this->Admin_m->delete_namadoa($id);
 		$this->session->set_flashdata('alert', '<div class="alert alert-success">Nama Doa berhasil dihapus</div>');
-		redirect('admin/nama_doa/'.$this->session->userdata('id_item'));
+		redirect('Admin/nama_doa/'.$this->session->userdata('id_item'));
 	}
 
 	function tambah_kontributor()
@@ -354,12 +356,12 @@ class Admin extends MX_Controller
 		{
 			$this->Admin_m->add_kontributor();
 			$this->session->set_flashdata('alert', '<div class="alert alert-success">Berhasil menambahkan kontributor</div>');
-			redirect('admin/kontributor');
+			redirect('Admin/kontributor');
 		}
 		else
 		{
 			$this->session->set_flashdata('alert', '<div class="alert alert-warning">username tersebut sudah ada</div>');
-			redirect('admin/tambah_kontributor');
+			redirect('Admin/tambah_kontributor');
 		}
 	}
 
@@ -380,14 +382,14 @@ class Admin extends MX_Controller
 	{
 		$this->Admin_m->update_kontributor($id);
 		$this->session->set_flashdata('alert', '<div class="alert alert-success">Data Kontributor berhasil diedit</div>');
-		redirect('admin/kontributor');
+		redirect('Admin/kontributor');
 	}
 
 	function delete_kontributor($id)
 	{
 		$this->Admin_m->delete_kontributor($id);
 		$this->session->set_flashdata('alert', '<div class="alert alert-success">Data Kontributor berhasil dihapus</div>');
-		redirect('admin/kontributor');
+		redirect('Admin/kontributor');
 	}
 
 	function log()
@@ -420,7 +422,7 @@ class Admin extends MX_Controller
 	{
 		$this->Admin_m->delete_log($id);
 		$this->session->set_flashdata('alert', '<div class="alert alert-success">Data log berhasil dihapus</div>');
-		redirect('admin/log');
+		redirect('Admin/log');
 	}
 
 	function profil()
@@ -444,12 +446,12 @@ class Admin extends MX_Controller
 		{
 			$this->Admin_m->update_admin($id);
 			$this->session->set_flashdata('alert', '<div class="alert alert-success">Data anda berhasil diubah</div>');
-			redirect('admin/profil');
+			redirect('Admin/profil');
 		}
 		else
 		{
 			$this->session->set_flashdata('alert', '<div class="alert alert-danger">Password lama anda salah</div>');
-			redirect('admin/profil');	
+			redirect('Admin/profil');	
 		}	
 	}
 }

@@ -28,7 +28,7 @@
 												<td><?php echo $row['n_item']; ?></td>
 												<td><?php echo $row['jumlah']; ?></td>
 												<td style="text-align: center; ">
-													<a  href="<?php echo base_url('kontributor/doa/').$row['id_item']; ?>" class="btn btn-outline-info fa fa-search"></a>
+													<a  href="<?php echo base_url('Kontributor/doa/').$row['id_item']; ?>" class="btn btn-outline-info fa fa-search"></a>
 												</td>
 											</tr>
 											

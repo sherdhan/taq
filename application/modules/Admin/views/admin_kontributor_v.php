@@ -7,7 +7,7 @@
 	  <div class="card-header">
 	  <strong>Kontributor</strong>
 	  <small>Data</small>
-   	  <a href="<?php echo base_url('admin/tambah_kontributor'); ?>" ><button class="btn btn-primary" type="submit" style="position: absolute; right: 1%;">Tambah Kontributor</button></a>
+   	  <a href="<?php echo base_url('Admin/tambah_kontributor'); ?>" ><button class="btn btn-primary" type="submit" style="position: absolute; right: 1%;">Tambah Kontributor</button></a>
    	  
 	  </div>
 	 <div class="card-body">
@@ -47,7 +47,7 @@
 	   	  <?php }
 	   			?>
 	   			<td style="text-align: center; ">
-		   <a  href="<?php echo base_url('admin/edit_kontributor/').$row['id_kontributor']; ?>" class="btn btn-outline-warning fa fa-pencil"></a>
+		   <a  href="<?php echo base_url('Admin/edit_kontributor/').$row['id_kontributor']; ?>" class="btn btn-outline-warning fa fa-pencil"></a>
 		   <a ><button data-toggle="modal" data-target="#<?php echo $row['id_kontributor']; ?>" type="button" class="btn btn-outline-danger fa fa-trash-o"></button></a>
 	      		</td>
 		 	</tr>
@@ -66,7 +66,7 @@
 		 		</p>
 		 	</div>
 		 	<div class="modal-footer">
-		 	  	<a href="<?php echo base_url('admin/delete_kontributor/').$row['id_kontributor']; ?>"><button type="button" class="btn btn-danger">Hapus</button></a>
+		 	  	<a href="<?php echo base_url('Admin/delete_kontributor/').$row['id_kontributor']; ?>"><button type="button" class="btn btn-danger">Hapus</button></a>
 		 	  	<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 		 	</div>
 		</div>

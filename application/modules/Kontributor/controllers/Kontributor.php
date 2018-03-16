@@ -60,7 +60,8 @@ class Kontributor extends MX_Controller
 		$data['data']=$this->Admin_m->get_all_doa($id);
 		$db=$this->Kontributor_m->get_n_item($id);
 		$datauser=array(
-						'n_item'=>$db['n_item']
+						'n_item'=>$db['n_item'],
+                                                'id_item'=>$db['id_item']
 					);
 		$this->session->set_userdata($datauser);
 		$data['menu']="Kategori";
@@ -104,7 +105,7 @@ class Kontributor extends MX_Controller
 		$this->Kontributor_m->add_log($data);
 		$this->Admin_m->update_doa($id);
 		$this->session->set_flashdata('alert', '<div class="alert alert-success">Doa berhasil diedit</div>');
-		redirect('kontributor');
+		redirect('Kontributor/doa/'.$this->session->userdata('id_item'));
 	}
 
 	function profil()

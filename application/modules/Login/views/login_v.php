@@ -34,7 +34,7 @@
             <div class="card-body">
               <h1>Masuk</h1>
               <p class="text-muted">Masuk ke akun</p>
-              <form action='<?php echo base_url('login/masuk'); ?>' method="POST">
+              <form action='<?php echo base_url('Login/masuk'); ?>' method="POST">
                 <div id="not">
                   <?php echo $this->session->flashdata('alert'); ?>
                 </div> 
@@ -51,7 +51,7 @@
                     <button name="submit" class="btn btn-primary px-4" value="submit">Masuk</button>
                   </div>
                   <div class="col-6 text-right">
-                    <button name="lupa" class="btn btn-link px-0" value="lupa">Lupa Password?</button>
+                    
                   </div>
                 </div>
               </form>
@@ -62,7 +62,7 @@
               <div>
                 <h2>Daftar Akun</h2>
                 <p>Segera daftar untuk menjadi Kontributor dalam Taqorrubat ini.</p><br>
-                <a href="<?php echo base_url('daftar'); ?>" title=""><button type="button" class="btn btn-primary mt-3 ">Daftar Sekarang!</button></a>
+                <a href="<?php echo base_url('Daftar'); ?>" title=""><button type="button" class="btn btn-primary mt-3 ">Daftar Sekarang!</button></a>
               </div>
             </div>
           </div>

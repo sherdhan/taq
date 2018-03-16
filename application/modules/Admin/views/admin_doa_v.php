@@ -31,7 +31,7 @@
 												<td style="text-align: right;font-family: 'Amiri';font-size: 14pt;"><?php echo $row['doa']; ?></td>
 												<td style="text-align: center; vertical-align: middle;"><?php echo $row['kali']; ?> X</td>
 												<td style="text-align: center; vertical-align: middle;">
-												   <a  href="<?php echo base_url('admin/edit_doa/').$row['id_doa']; ?>" class="btn btn-outline-warning fa fa-pencil"></a>
+												   <a  href="<?php echo base_url('Admin/edit_doa/').$row['id_doa']; ?>" class="btn btn-outline-warning fa fa-pencil"></a>
 												   <button type="button" data-toggle="modal" data-target="#<?php echo $row['id_doa']; ?>" class="btn btn-outline-danger fa fa-trash-o"></button>
 												</td>
 											</tr>
@@ -53,7 +53,7 @@
 		 		</p>
 		 	</div>
 		 	<div class="modal-footer">
-		 	  	<a href="<?php echo base_url('admin/delete_doa/').$row['id_doa']; ?>" ><button type="button" class="btn btn-danger">Hapus</button></a>
+		 	  	<a href="<?php echo base_url('Admin/delete_doa/').$row['id_doa']; ?>" ><button type="button" class="btn btn-danger">Hapus</button></a>
 		 	  	<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 		 	</div>
 		</div>

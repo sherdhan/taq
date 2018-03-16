@@ -31,7 +31,7 @@
 		  <td><?php echo $row['n_kat']; ?></td>
 		  <td><?php echo $row['jumlah']; ?></td>
 		  <td style="text-align: center; ">
-		   <a  href="<?php echo base_url('kontributor/nama_doa/').$row['id_kat']; ?>" class="btn btn-outline-info fa fa-search"></a>
+		   <a  href="<?php echo base_url('Kontributor/nama_doa/').$row['id_kat']; ?>" class="btn btn-outline-info fa fa-search"></a>
 		<?php	
 		}
 		?>

@@ -10,7 +10,7 @@
       </div>
       <div class="card-body">
        <div class="row">
-        <form action="<?php echo base_url('admin/add_item'); ?>" method="POST" data-parsley-validate enctype="multipart/form-data" style="width: 100%">
+        <form action="<?php echo base_url('Admin/add_item'); ?>" method="POST" data-parsley-validate enctype="multipart/form-data" style="width: 100%">
           <div id="not" style="width: 100%">
             <?php echo $this->session->flashdata('alert'); ?> 
           </div>

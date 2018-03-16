@@ -37,7 +37,7 @@
             <div id="not" style="width: 100%">
               <?php echo $this->session->flashdata('alert'); ?> 
             </div> 
-            <form action="<?php echo base_url('daftar/addkontributor'); ?>" method="POST" data-parsley-validate enctype="multipart/form-data">
+            <form action="<?php echo base_url('Daftar/addkontributor'); ?>" method="POST" data-parsley-validate enctype="multipart/form-data">
 
             <div class="input-group mb-3">
               <div class="input-group-prepend">

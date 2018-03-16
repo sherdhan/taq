@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'pr_taqorrubat',
+	'hostname' => 'fdb18.awardspace.net',
+	'username' => '2554779_taqorrubat',
+	'password' => 'sherdhan5758',
+	'database' => '2554779_taqorrubat',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

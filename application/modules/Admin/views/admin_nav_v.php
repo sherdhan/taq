@@ -34,13 +34,13 @@
           <div class="dropdown-header text-center">
             <strong>Settings</strong>
           </div>
-          <a class="dropdown-item" href="<?php echo base_url('admin/profil'); ?>"><i class="fa fa-user"></i> Profile</a>
+          <a class="dropdown-item" href="<?php echo base_url('Admin/profil'); ?>"><i class="fa fa-user"></i> Profile</a>
           <!-- <a class="dropdown-item" href="#"><i class="fa fa-wrench"></i> Settings</a>
           <a class="dropdown-item" href="#"><i class="fa fa-usd"></i> Payments<span class="badge badge-secondary">42</span></a>
           <a class="dropdown-item" href="#"><i class="fa fa-file"></i> Projects<span class="badge badge-primary">42</span></a>
           <div class="divider"></div>
           <a class="dropdown-item" href="#"><i class="fa fa-shield"></i> Lock Account</a> -->
-          <a class="dropdown-item" href='<?php echo base_url('login/logout'); ?>'><i class="fa fa-lock"></i> Logout</a>
+          <a class="dropdown-item" href='<?php echo base_url('Login/logout'); ?>'><i class="fa fa-lock"></i> Logout</a>
         </div>
       </li>
     </ul>
