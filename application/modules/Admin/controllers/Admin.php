@@ -5,6 +5,7 @@ class Admin extends MX_Controller
 {
 	function __construct()
 	{
+		muqta
 		parent::__construct();
 		$this->load->module('Template');
                 $this->load->module('Kontributor');
